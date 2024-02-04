@@ -1,16 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const formattedDate=  require('../logs/logfile');
 
-const userRoute = require('./userRoute');
+const RBHRoute = require('./RBHRoute');
 const authRoute = require('./authRoute');
+const customerRoute = require('./customerRoute');
 
 router.use((req,res,next) =>{
-  console.log(req.method , 'Time' , Date.now());
+  console.log(req.method , req.url ,formattedDate);
   next();
 });
 
 router.use('/auth' , authRoute);
-router.use('/user' , userRoute);
+router.use('/rbh' , RBHRoute);
+router.use('/customer' , customerRoute);
+
+
 
 
 

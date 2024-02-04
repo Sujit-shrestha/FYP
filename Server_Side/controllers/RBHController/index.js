@@ -1,6 +1,6 @@
 // controllers/authController.js
 
-const userController = {
+const RBHController = {
   get: (req, res) => {
     // Logic for handling login
     res.json({
@@ -30,4 +30,4 @@ const userController = {
   },
 };
 
-module.exports = userController;
+module.exports = RBHController;
