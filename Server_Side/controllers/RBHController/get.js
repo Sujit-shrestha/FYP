@@ -1,6 +1,7 @@
 const path = require('path');
 const {RBH} = require(path.join(__dirname , '../../config/models.js'));
 const {connectToDatabase , disconnectFromDatabase} = require(path.join(__dirname ,'../../config/dbOperation.js' ))
+
 async function get(id = null){
   try{
     await connectToDatabase();
