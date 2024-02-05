@@ -33,6 +33,9 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+/* custom colors */
+    --dashboard-toparea : 240 10% 99%;
+    --dashboard-text : 220 70% 15%;
   }
  
   .dark {
