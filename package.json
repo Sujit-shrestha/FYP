@@ -1,10 +1,13 @@
 {
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd Server_Side && node index.js",
+    "server": "cd Server_Side && nodemon index.js",
     "client": "cd Client_Side && npm run dev"
   },
   "devDependencies": {
     "concurrently": "^6.5.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
   }
 }
