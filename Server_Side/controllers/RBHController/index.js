@@ -1,32 +1,44 @@
-// controllers/authController.js
+// controllers/RBHController.js
 
 const RBHController = {
-  get: (req, res) => {
+  get: async (req, res) => {
     // Logic for handling login
-    res.json({
-      "message": "User get route"
-    });
+    const getFn = require("./get.js");
+
+    response = await getFn(req.params.id);
+    statusCode = response.statusCode;
+    delete response.statusCode;
+    res.status(statusCode).send(response);
   },
 
-  create: (req, res) => {
+  create: async (req, res) => {
     // Logic for handling user registration
-    res.json({
-      "message": "User create route"
-    });
+    const createFn = require("./create.js");
+
+    response = await createFn(req);
+    statusCode = response.statusCode;
+    delete response.statusCode;
+    res.status(statusCode).send(response);
   },
 
-  update: (req, res) => {
+  update: async (req, res) => {
     // Logic for handling logout
-    res.json({
-      "message": "User update route"
-    });
+    const updateFn = require("./update.js");
+
+    response = await updateFn(req.params.id , req);
+    statusCode = response.statusCode;
+    delete response.statusCode;
+    res.status(statusCode).send(response);
   },
 
-  delete: (req, res) => {
+  delete: async (req, res) => {
     // Logic for handling logout
-    res.json({
-      "message": "User delete route"
-    });
+    const deleteFn = require("./delete.js");
+
+    response = await deleteFn(req , req.params.id);
+    statusCode = response.statusCode;
+    delete response.statusCode;
+    res.status(statusCode).send(response);
   },
 };
 

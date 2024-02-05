@@ -20,7 +20,7 @@ async function create(req){
     await disconnectFromDatabase();
     return  {
       status: true,
-      statusCode: 200,
+      statusCode: 201,
       message: "Data created successfully",
       data : req.body
     };
