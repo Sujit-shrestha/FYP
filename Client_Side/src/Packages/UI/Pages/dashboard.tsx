@@ -18,15 +18,11 @@ const Dashboard =  () => {
     Requests: requestsLogo,
     Logout: logoutLogo,
   });
-  let com :Array <Element > =[];
+
+  const renderOptions = (data: Object) => {
+    return Object.entries(data).map(([key, value]) => Options(value, key));
+  };
   
-  const caller =  (data : Object) => {
-    Object.entries(data).map(([key ,value]) =>{
-     com.push(  Options(value , key));
-  
-    });
-  }
-   caller(option)
   return (
     <>
       <div id="toparea" className="flex w-screen bg-secondary">
@@ -38,9 +34,9 @@ const Dashboard =  () => {
           "w-1/6 bg-red min-h-screen font-sans text-dashboard-text bg-slate-300"
         }
       >
-        {com }
+        {renderOptions(option)}
       </div>
     </>
   );
-};
+      }
 export default Dashboard;
