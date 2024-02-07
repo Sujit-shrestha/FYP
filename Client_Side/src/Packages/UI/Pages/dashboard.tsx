@@ -9,10 +9,10 @@ import { Options } from "../Components/Dashboard/leftSideOptions";
 import { useState } from "react";
 // import { useTheme } from "@/components/theme-provider";
 
-const Dashboard =  () => {
+const Dashboard = () => {
   // const { theme } = useTheme()
-  const [option ] = useState({
-    dashboard: dashboardLogo,
+  const [option] = useState({
+    Dashboard: dashboardLogo,
     Settings: settingLogo,
     "Your Listings": yourListingLogo,
     Requests: requestsLogo,
@@ -22,21 +22,27 @@ const Dashboard =  () => {
   const renderOptions = (data: Object) => {
     return Object.entries(data).map(([key, value]) => Options(value, key));
   };
-  
+
   return (
-    <>
-      <div id="toparea" className="flex w-screen bg-secondary">
+    <div className="grid w-100% bg-gray-800 h-100%">
+
+
+      <div id="toparea" className="col-span-12 bg-secondary ">
         <img src={logo} alt=" SC project" className="w-48 p-4 " />
       </div>
-      <div
-        id="Leftarea"
-        className={
-          "w-1/6 bg-red min-h-screen font-sans text-dashboard-text bg-slate-300"
-        }
-      >
-        {renderOptions(option)}
+
+      <div id="mainArea" className="grid grid-flow-col gap-4 w-screen">
+        <div
+          id="leftarea"
+          className="col-span-2 mr-2 h-screen font-sans text-dashboard-text bg-slate-300 fixed overflow-y-none"
+        >
+          {renderOptions(option)}
+        </div>
+        <div id="rightArea" className=" ml-[180px] col-span-12 bg-slate-200 ">
+          Right area
+        </div>
       </div>
-    </>
+    </div>
   );
-      }
+};
 export default Dashboard;

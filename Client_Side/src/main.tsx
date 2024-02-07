@@ -1,4 +1,5 @@
 import React from "react";
+import './Packages/UI/Styles/globals.css'
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./Packages/UI/Styles/globals.css";
