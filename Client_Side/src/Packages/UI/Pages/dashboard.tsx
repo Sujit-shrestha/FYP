@@ -5,7 +5,7 @@ import yourListingLogo from "../../../assets/DashboardSVGs//yourListing.svg";
 import requestsLogo from "../../../assets/DashboardSVGs//requests.svg";
 import logoutLogo from "../../../assets/DashboardSVGs//logout.svg";
 
-import { Options } from "../Components/Dashboard/leftSideOptions";
+import { DashboardOptions } from "../Components/Dashboard/leftSideOptions";
 import { useState } from "react";
 // import { useTheme } from "@/components/theme-provider";
 
@@ -20,7 +20,7 @@ const Dashboard = () => {
   });
 
   const renderOptions = (data: Object) => {
-    return Object.entries(data).map(([key, value]) => Options(value, key));
+    return Object.entries(data).map(([key, value]) => DashboardOptions(value, key));
   };
 
   return (
@@ -34,7 +34,7 @@ const Dashboard = () => {
       <div id="mainArea" className="grid grid-flow-col gap-4 w-screen">
         <div
           id="leftarea"
-          className="col-span-2 mr-2 h-screen font-sans text-dashboard-text bg-slate-300 fixed overflow-y-none"
+          className="col-span-2 mr-2 h-screen font-sans text-dashboard-text bg-slate-200 fixed overflow-y-none"
         >
           {renderOptions(option)}
         </div>
