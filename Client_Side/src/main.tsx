@@ -1,5 +1,5 @@
 import React from "react";
-import './Packages/UI/Styles/globals.css'
+import "./Packages/UI/Styles/globals.css";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./Packages/UI/Styles/globals.css";
@@ -13,11 +13,10 @@ import { ThemeProvider } from "./components/theme-provider";
 
 //routing configuration
 const router = createBrowserRouter([
-  { path: "/", element: <Dashboard />, errorElement: <ErrorPage /> , children: [{
-    path: "/login", element: <Login />
-  } , { path: "/signup", element: <Signup /> }]
-
-}]);
+  { path: "/", element: <Dashboard />, errorElement: <ErrorPage /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
