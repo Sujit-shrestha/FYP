@@ -10,7 +10,7 @@ import Signup from "./Packages/UI/Pages/signup";
 import Dashboard from "./Packages/UI/Pages/dashboard";
 import Login from "./Packages/UI/Pages/login";
 import { ThemeProvider } from "./components/theme-provider";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 //routing configuration
 const router = createBrowserRouter([
