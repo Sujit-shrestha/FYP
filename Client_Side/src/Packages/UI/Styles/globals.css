@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
  
+body{
+  height: 100vh;
+  background-color: rgb(84, 82, 82);
+}
+#root{
+  
+  /* display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr; */
+  /* grid-template-areas: 
+    "side header"
+    "side main"; */
+  ;
+}
+/* .header{
+  background-color: aqua;
+
+ grid-area: header;
+}
+
+.sidebar{
+  background-color: azure;
+grid-area : side;
+}
+
+.mainContainer{
+  background-color: rgb(188, 92, 92);
+grid-area : header;
+
+} */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -33,6 +63,9 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+/* custom colors */
+    --dashboard-toparea : 240 10% 99%;
+    --dashboard-text : 220 70% 15%;
   }
  
   .dark {
