@@ -7,6 +7,7 @@ import logoutLogo from "../../../assets/DashboardSVGs//logout.svg";
 
 import { DashboardOptions } from "../Components/Dashboard/leftSideOptions";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 // import { useTheme } from "@/components/theme-provider";
 
 const Dashboard = () => {
@@ -14,7 +15,7 @@ const Dashboard = () => {
   const [option] = useState({
     Dashboard: dashboardLogo,
     Settings: settingLogo,
-    "Your Listings": yourListingLogo,
+    Listings : yourListingLogo,
     Requests: requestsLogo,
     Logout: logoutLogo,
   });
@@ -38,8 +39,9 @@ const Dashboard = () => {
         >
           {renderOptions(option)}
         </div>
-        <div id="rightArea" className=" ml-[180px] col-span-12 bg-slate-200 ">
-          Right area
+        <div id="rightArea" className=" ml-[159.6px] col-span-12 bg-slate-200 ">
+          
+          <Outlet />
         </div>
       </div>
     </div>
