@@ -10,17 +10,19 @@ import Signup from "./Packages/UI/Pages/signup";
 import Dashboard from "./Packages/UI/Pages/dashboard";
 import Login from "./Packages/UI/Pages/login";
 import { ThemeProvider } from "./components/theme-provider";
+import Landing from "./Packages/UI/Pages/Landing";
 
 //routing configuration
 const router = createBrowserRouter([
-  { path: "/", element: <Dashboard />, errorElement: <ErrorPage /> },
+  { path: "/", element: <Landing />, errorElement: <ErrorPage /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
+  { path: "/dashboard", element: <Dashboard /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
