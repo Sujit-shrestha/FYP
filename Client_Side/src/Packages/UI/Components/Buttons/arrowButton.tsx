@@ -5,7 +5,7 @@ export const ArrowButton = () => {
   return (
  
 
-    <div className="w-10 h-10 relative flex justify-center items-center rounded-full overflow-hidden bg-slate-900">
+    <div className="w-10 h-10 relative flex justify-center items-center rounded-full overflow-hidden bg-slate-900 hover:bg-slate-600">
       <Avatar>
         <Link to="/needTodefine">
         <AvatarImage src={arrow} />          
