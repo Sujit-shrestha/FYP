@@ -5,6 +5,7 @@
 body{
   height: 100vh;
   background-color: rgb(84, 82, 82);
+  font-family: 'Roboto', sans-serif;
 }
 #root{
   
@@ -14,7 +15,7 @@ body{
   /* grid-template-areas: 
     "side header"
     "side main"; */
-  ;
+  
 }
 /* .header{
   background-color: aqua;
