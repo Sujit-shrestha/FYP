@@ -4,7 +4,10 @@ export const YourListings = ()=>{
 
   return(
     <>
-   <ProductCard />
+    <div className="p-3">
+      <ProductCard />
+    </div>
+  
     </>
   );
 }
