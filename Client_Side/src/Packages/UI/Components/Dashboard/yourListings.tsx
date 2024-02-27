@@ -4,7 +4,7 @@ export const YourListings = ()=>{
 
   return(
     <>
-   <ProductCard name ="Ramma rama"/>
+   <ProductCard />
     </>
   );
 }

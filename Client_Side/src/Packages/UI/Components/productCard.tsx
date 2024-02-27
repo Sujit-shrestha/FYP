@@ -3,7 +3,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowButton } from "./Buttons/arrowButton";
 import { ProductcardButton } from "./Buttons/productcardButton";
 
-export const ProductCard = (name?: string) => {
+interface i {
+  name? : string;
+}
+
+export const ProductCard = ({name}:i) => {
   name = "Ram lal shresthafdsfds";
   const truncatedName = name.length > 15 ? `${name.substring(0, 15)}...` : name;
 
