@@ -4,17 +4,23 @@ import { ArrowButton } from "./Buttons/arrowButton";
 import { ProductcardButton } from "./Buttons/productcardButton";
 
 interface i {
-  name? : string;
+  name?: string;
 }
 
-export const ProductCard = ({name}:i) => {
+export const ProductCard = ({ name }: i) => {
   name = "Ram lal shresthafdsfds";
   const truncatedName = name.length > 15 ? `${name.substring(0, 15)}...` : name;
 
+  //for body data
+  const Kilometers = 10000;
+  const Color = "Red";
+  const Model = "2019";
+  const bidsCount = 20;
+
   return (
     <div
-      className="w-80  rounded overflow-hidden shadow-lg border-black text-white select-none"
-      style={{ border: " 2px solid blue", backgroundColor: "#1A2233" }}
+      className="w-80  rounded overflow-hidden  shadow-lg shadow-blue-500/50 border-black text-white select-none"
+      style={{ backgroundColor: "#1A2233" }}
     >
       <div id="topproductCard" className="flex justify-space-between  p-2">
         <Avatar>
@@ -35,11 +41,11 @@ export const ProductCard = ({name}:i) => {
           id="text-midproductCard"
           className="flex flex-col  w-1/2 whitespace-normal " // Width set to 50%
         >
-          <span className="font-extrabold ">CRF 250</span>
-          <span>Model:</span>
-          <span>Kilometers:</span>
-          <span>Color:</span>
-          <span>No. of Bids:</span>
+          <span className="font-bold text-xl ">CRF 250</span>
+          <span className="text-sm">Kilometers: {Kilometers}</span>
+          <span className="text-sm">Color: {Color}</span>
+          <span className="text-sm">Model: {Model}</span>
+          <span className="text-sm">No. of Bids: {bidsCount}</span>
         </div>
         <div
           id="image-div"
@@ -49,11 +55,21 @@ export const ProductCard = ({name}:i) => {
         </div>
       </div>
 
-      <div id="bottomproductCard" className="grid grid-cols-2 gap-1 my-5 p-3" >
-        <ProductcardButton  variant="secondary" amount={50000} text = "Rs. "  />
-        <ProductcardButton amount={50000} color="-orange" text = "Rs. " />
-        <ProductcardButton  color="-green" text = "Update Bid"/>
-        <ProductcardButton variant="link" amount={50000} color="white" ></ProductcardButton>
+      <div
+        id="bottomproductCard"
+        className="grid grid-cols-2 gap-1 gap-y-3 my-5 p-3"
+      >
+        <ProductcardButton variant="secondary" amount={50000} text="Rs. " />
+        <ProductcardButton amount={50000} color="-orange" text="Rs. " />
+        <ProductcardButton color="-green" text="Update Bid" />
+        <ProductcardButton
+          variant="link"
+          text="Bid "
+          amount={5000}
+          color="white"
+          textColor="red"
+          font="thin"
+        ></ProductcardButton>
       </div>
     </div>
   );
