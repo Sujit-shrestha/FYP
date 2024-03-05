@@ -8,6 +8,7 @@
     "concurrently": "^6.5.1"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.0.7",
     "@vercel/speed-insights": "^1.0.10",
     "dotenv": "^16.4.1",
     "path": "^0.12.7"
