@@ -9,7 +9,7 @@ export const DashboardOptions = (logo: string, name: string) => {
   let lower = name.toLowerCase(); 
 
   return (
-    <Link key={name} to={`/dashboard/${lower}`}>
+    <Link key={name} to={`/d/${lower}`}>
       <div
         className="flex  p-3 hover:text-orange-500  active:bg-slate-300  transition cursor-pointer select-none"
         key={name}

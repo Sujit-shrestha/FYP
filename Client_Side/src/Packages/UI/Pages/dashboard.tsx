@@ -8,6 +8,7 @@ import logoutLogo from "../../../assets/DashboardSVGs//logout.svg";
 import { DashboardOptions } from "../Components/Dashboard/leftSideOptions";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import { Searchbox } from "../Components/Dashboard/searchBox";
 // import { useTheme } from "@/components/theme-provider";
 
 const Dashboard = () => {
@@ -25,11 +26,15 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="grid w-100% bg-gray-800 h-100%">
+    <div className="grid w-100%  h-100%">
 
 
-      <div id="toparea" className="col-span-12 bg-secondary ">
+      <div id="toparea" className="col-span-12 bg-secondary flex">
         <img src={logo} alt=" SC project" className="w-48 p-4 " />
+        <div className="py-4">
+        <Searchbox />
+
+        </div>
       </div>
 
       <div id="mainArea" className="grid grid-flow-col gap-4 w-screen">

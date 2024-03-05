@@ -4,8 +4,8 @@ const Landing = () => {
   return (
     <>
       <h1>Landing page ...</h1>
-      <Link to="/dashboard"> Dashboard</Link>
-      <Link to="login"> Login</Link>
+      <Link to="/d"> Dashboard</Link>
+      <Link to="/login"> Login</Link>
     </>
   );
 };
