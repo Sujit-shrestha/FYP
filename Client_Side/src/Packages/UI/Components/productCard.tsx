@@ -19,7 +19,7 @@ export const ProductCard = ({ name }: i) => {
 
   return (
     <div
-      className="w-80  rounded overflow-hidden  shadow-lg shadow-blue-500/50 border-black text-white select-none"
+      className="w-80 h-80 rounded overflow-hidden  shadow-lg shadow-blue-500/50 border-black text-white select-none"
       style={{ backgroundColor: "#1A2233" }}
     >
       <div id="topproductCard" className="flex justify-space-between  p-2">
@@ -66,7 +66,7 @@ export const ProductCard = ({ name }: i) => {
           variant="link"
           text="Bid "
           amount={5000}
-          color="white"
+          color="-white"
           textColor="red"
           font="thin"
         ></ProductcardButton>

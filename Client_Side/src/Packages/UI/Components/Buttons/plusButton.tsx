@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import arrow from "../../../../assets/arrow_forward.svg";
+import plus from "../../../../assets/plus.svg";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-export const ArrowButton = () => {
+export const PlusButton = () => {
   return (
  
     <div className="w-10 h-10 relative flex justify-center items-center rounded-full overflow-hidden bg-slate-900 hover:bg-slate-600">
       <Avatar>
         <Link to="/needTodefine">
-        <AvatarImage src={arrow} />          
-        <AvatarFallback>Arrow</AvatarFallback>
+        <AvatarImage src={plus} />          
+        <AvatarFallback>Plus</AvatarFallback>
         </Link>
       </Avatar>
     </div>

@@ -31,7 +31,7 @@ export const ProductcardButton = ({
         variant={variant}
         className={`text-${textColor} font-${font} rounded-3xl bg${color}-500 text-lg w-50 `}
       >
-        <Link to="/login">
+        <Link to={`/${text}`}>
          
           {text} {amount}
         </Link>

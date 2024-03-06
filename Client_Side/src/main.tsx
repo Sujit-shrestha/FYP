@@ -11,15 +11,15 @@ import Dashboard from "./Packages/UI/Pages/dashboard";
 import Login from "./Packages/UI/Pages/login";
 import { ThemeProvider } from "./components/theme-provider";
 import Landing from "./Packages/UI/Pages/Landing";
-import { YourListings } from "./Packages/UI/Components/Dashboard/yourListings";
+import { Listings } from "./Packages/UI/Pages/listings";
 
 //routing configuration
 const router = createBrowserRouter([
   { path: "/", element: <Landing />, errorElement: <ErrorPage /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
-  { path: "/dashboard", element: <Dashboard />  , children:[{
-    path: "listings" , element:<YourListings />,
+  { path: "/d", element: <Dashboard />  , children:[{
+    path: "listings" , element:<Listings />,
     // path: "settings" , element:<Settings />,
     // path: "requests" , element:<Requests />
   }] },
